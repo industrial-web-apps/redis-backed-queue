@@ -1,5 +1,5 @@
 {
-  "name": "redis-queue",
+  "name": "redis-backed-queue",
   "version": "0.1.0",
   "description": "A redis based queue",
   "main": "redis-queue.js",
@@ -22,9 +22,9 @@
   ],
   "author": "Dave Bowles/Dave Workman",
   "license": "MIT",
-  "url": "https://github.com/industrial-web-apps/redis-queue",
+  "url": "https://github.com/industrial-web-apps/redis-backed-queue",
   "repository": {
     "type": "git",
-    "url": "https://github.com/industrial-web-apps/redis-queue.git"
+    "url": "https://github.com/industrial-web-apps/redis-backed-queue.git"
   }
 }
