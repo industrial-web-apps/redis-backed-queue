@@ -7,6 +7,10 @@ function Queue(options, cb) {
     cb();
 }
 
+Queue.prototype.quit = function() {
+    this._client.quit();
+};
+
 Queue.prototype.clear = function(cb) {
     this._client.del(this.arrayName, cb);
 };
