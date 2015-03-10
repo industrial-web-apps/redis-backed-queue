@@ -1,12 +1,7 @@
 var redis = require("redis");
 
-function Queue(options, redisOptions) {
-    if (typeof redisOptions === 'function') {
-        var cb = redisOptions;
-        console.error('WARN: redis-backed-queue - callback parameter is deprecated' +
-            ' this parameter is now in place for redis configuration.');
-        process.nextTick(cb);
-    }
+function Queue(options /* redis: port, host, options*/) {
+    redisOptions = Array.prototype.slice(arguments, 1);
     if (!Array.isArray(redisOptions))
         redisOptions = [];
     this._client = redis.createClient.apply(redis, redisOptions);
