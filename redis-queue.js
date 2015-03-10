@@ -1,10 +1,9 @@
 var redis = require("redis");
 
-function Queue(options, cb) {
+function Queue(options) {
     this._client = redis.createClient();
     this.arrayName = (typeof options === 'string') ? options : options.arrayName;
     this.processArray = this.arrayName + '_proc';
-    cb();
 }
 
 Queue.prototype.quit = function() {

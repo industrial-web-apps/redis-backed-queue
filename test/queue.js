@@ -6,10 +6,9 @@ var assert = require('assert'),
 describe('Queue', function() {
   var queue, queue2;
 
-  beforeEach(function(done) {
-    queue = new Queue('tmp', function () {
-      queue2 = new Queue('tmp', done);
-    });
+  beforeEach(function() {
+    queue = new Queue('tmp');
+    queue2 = new Queue('tmp');
   });
 
   afterEach(function(done) {
