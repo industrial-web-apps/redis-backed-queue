@@ -1,6 +1,6 @@
 {
   "name": "redis-backed-queue",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A redis based queue",
   "main": "redis-queue.js",
   "scripts": {

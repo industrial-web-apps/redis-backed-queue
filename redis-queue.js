@@ -1,7 +1,7 @@
 var redis = require("redis");
 
 function Queue(options /* redis: port, host, options*/) {
-    redisOptions = Array.prototype.slice(arguments, 1);
+    redisOptions = Array.prototype.slice.call(arguments, 1);
     if (!Array.isArray(redisOptions))
         redisOptions = [];
     this._client = redis.createClient.apply(redis, redisOptions);
