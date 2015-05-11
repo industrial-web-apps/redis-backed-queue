@@ -48,7 +48,7 @@ Queue.prototype.tpop = function(cb) {
                     that._client.lrem(that.processArray, 1, item, cb);
                 });
             };
-        that._client.rpush(that.processArray, item);
+        that._client.rpush(that.processArray, item[1]);
         cb(null, JSON.parse(item[1]), commit, rollback);
     });
 };
