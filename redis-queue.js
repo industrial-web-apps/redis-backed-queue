@@ -45,7 +45,7 @@ Queue.prototype.tpop = function(cb) {
             },
             rollback = function (cb) {
                 that._client.lpush(that.arrayName, item[1], function () {
-                    that._client.lrem(that.processArray, 1, item, cb);
+                    that._client.lrem(that.processArray, 1, item[1], cb);
                 });
             };
         that._client.rpush(that.processArray, item[1]);
