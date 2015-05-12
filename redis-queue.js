@@ -41,7 +41,7 @@ Queue.prototype.tpop = function(cb) {
         if (err)
             return cb(err);
         var commit = function (cb) {
-                that._client.lrem(that.processArray, 1, item, cb);
+                that._client.lrem(that.processArray, 1, item[1], cb);
             },
             rollback = function (cb) {
                 that._client.lpush(that.arrayName, item[1], function () {
